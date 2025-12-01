@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: com.parabank.tests.RunnerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 34.89 s <<< FAILURE! -- in com.parabank.tests.RunnerTest
+com.parabank.tests.RunnerTest.runScenario["Login into para bank with valid credentials", "Login into Para bank"](1) -- Time elapsed: 31.24 s <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at com.parabank.steps.LoginSteps.user_can_see_total_balance(LoginSteps.java:53)
+	at ✽.user can see total balance(file:///C:/Users/shubh/eclipse-workspace/ParaBank/src/test/resources/features/login.feature:8)
+

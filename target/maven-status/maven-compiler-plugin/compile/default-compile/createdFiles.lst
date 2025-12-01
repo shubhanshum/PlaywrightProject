@@ -1,0 +1,6 @@
+com\parabank\utils\Utilities.class
+com\parabank\core\BaseFactory.class
+com\parabank\core\CoreFunctions.class
+com\parabank\pages\HomePage.class
+com\parabank\steps\LoginSteps.class
+com\parabank\pages\LandingPage.class
