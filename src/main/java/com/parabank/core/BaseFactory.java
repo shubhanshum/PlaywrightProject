@@ -1,5 +1,7 @@
 package com.parabank.core;
 
+import java.nio.file.Paths;
+
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.BrowserType;
@@ -26,7 +28,13 @@ public class BaseFactory {
         }
 
         browser.set(browserType.launch(new BrowserType.LaunchOptions().setHeadless(headless)));
-        context.set(browser.get().newContext());
+        
+        
+        context.set(browser.get().newContext(new Browser.NewContextOptions()
+                .setRecordVideoDir(Paths.get("target/videos")) 
+                .setRecordVideoSize(1280, 720)
+            ));
+        
         page.set(context.get().newPage());
         return page.get();
     }
@@ -34,6 +42,10 @@ public class BaseFactory {
     public static Page getPage() { 
     	return page.get(); 
     	}
+    
+    public static BrowserContext getContext() {
+        return context.get();
+    }
 
     public static void close() {
         browser.get().close();
